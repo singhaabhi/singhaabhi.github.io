@@ -1,16 +1,8 @@
-body {
-  background-color: #ffe6e6;
-}
-
 hr {
   /* background-color: #fff; */
   border-top-color: #f4bfbf;
   border-style: none;
   border-top-style: dotted;
-  width: 6%;
+  width: 80px;
   border-width: 8px;
-}
-h1,
-h3 {
-  color: #d85364;
 }
