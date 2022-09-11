@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eaf6f6;
+}
+.nav {
+  height: 100px;
+  background-color: #66bfbf;
+}
+.logo {
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  transition: 0.3s;
+}
+.logo:hover {
+  height: 70px;
+  top: 15px;
+  left: 35px;
+}
+.navcon {
+  position: absolute;
+  right: 60px;
+  height: 100px;
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ff0063;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fff;
+  background-color: #ff0063;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.top-container {
+  font-family: pecita;
+  color: #ff0063;
+}
+.intro {
+  position: relative;
+  text-align: center;
+  bottom: 30px;
+}
+h1 {
+  font-size: 5rem;
+}
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: montserrat;
+}
+.highlight {
+  font-weight: 900;
+}
+.mount {
+  width: 100%;
+  margin-top: 100px;
+}
+
+#cloud1 {
+  position: relative;
+  height: 100px;
+  left: 180px;
+  top: 240px;
+}
+#cloud2 {
+  position: absolute;
+  height: 140px;
+  right: 120px;
+  top: 220px;
+}
+#cloud3 {
+  position: absolute;
+  height: 180px;
+  right: 520px;
+  top: 400px;
+}
+.mid-container {
+  height: 300px;
+  /* background-color: #ff0063; */
+}
+.bottom-container {
+  height: 300px;
+}
