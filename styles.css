@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
 }
-
+@font-face {
+  font-family: pecita;
+  src: url(2nd/Pecita.otf);
+}
 body {
   font-family: montserrat;
   background-color: #eaf6f6;
@@ -38,10 +41,10 @@ li {
 }
 a {
   text-decoration: none;
-  color: #fff;
+  color: #1a97a2;
   padding: 8px 16px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.11);
+  background-color: #fff;
   font-family: montserrat;
   font-weight: 500;
   font-size: 16px;
@@ -50,13 +53,12 @@ a {
 
 a:hover {
   color: #fff;
-  background-color: #ff0063;
+  background-color: #00737d;
   font-weight: 700;
   font-size: 20px;
 }
 
 .top-container {
-  margin-top: 200px;
   font-family: pecita;
   color: #ff0063;
 }
@@ -82,43 +84,34 @@ p {
   font-weight: 900;
 }
 .mount {
-  width: 40%;
-  margin-top: 50px;
+  width: 100%;
+  margin-top: 100px;
 }
-hr {
-  position: relative;
-  bottom: 7px;
-  border-top-color: #02736d;
-  border-style: none;
-  border-top-style: solid;
-  width: 80%;
-  border-width: 5px;
-}
+
 #cloud1 {
-  position: absolute;
-  height: 50px;
-  left: 300px;
-  top: 450px;
+  position: relative;
+  height: 100px;
+  left: 180px;
+  top: 240px;
 }
 #cloud2 {
   position: absolute;
-  height: 80px;
-  right: 300px;
-  top: 400px;
+  height: 140px;
+  right: 120px;
+  top: 220px;
 }
 #cloud3 {
   z-index: 5;
   position: absolute;
-  height: 100px;
-  right: 600px;
-  top: 550px;
+  height: 180px;
+  right: 520px;
+  top: 600px;
 }
 .mid-container {
   display: flex;
   justify-content: center;
   font-family: montserrat;
   color: #ff0063;
-  margin-top: 100px;
   margin-bottom: 200px;
 }
 .intro-mid {
