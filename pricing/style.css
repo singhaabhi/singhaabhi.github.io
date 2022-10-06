@@ -140,15 +140,16 @@ button {
 
     .secondbody {
         height: 100vh;
-        padding: 100px 30px;
+        padding: 0px 30px;
         /* backdrop-filter: blur(1rem); */
     }
 
     main {
+        height: max-content;
         display: block;
         display: flex;
         flex-direction: column;
-
+        margin-top: 50px;
     }
 
     section {
