@@ -1,23 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-img {
-
-    max-width: 100%;
-    max-height: 100%;
-}
-
-body {
-    margin: 0 40px;
-    background-color: #030C0F;
-    color: white;
-    font-family: Urbanist;
-}
+@import url('main.css');
 
 nav {
     height: 120px;
@@ -137,5 +118,3 @@ section span {
     font-size: larger;
     font-weight: 800;
 }
-
-/* footer {} */

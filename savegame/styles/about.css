@@ -1,0 +1,65 @@
+@import url('main.css');
+
+nav {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 36px;
+}
+
+.logo p {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(64, 193, 172);
+    text-decoration: none;
+}
+
+.link-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-section a {
+    color: rgb(64, 193, 172);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+    opacity: 60%;
+}
+
+main h2 {
+    color: rgba(123, 215, 200, 0.5);
+    text-align: center;
+    margin: 50px 0;
+}
+
+.para {
+    color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(64, 193, 172, 0.1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+main .para p:first-of-type {
+    margin-bottom: 100px;
+}
+
+/* span {} */
