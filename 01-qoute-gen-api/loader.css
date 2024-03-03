@@ -1,0 +1,13 @@
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 12px solid rgb(214, 185, 250);
+  border-right-color: rgb(144, 0, 255);
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
