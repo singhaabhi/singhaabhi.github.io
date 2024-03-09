@@ -15,16 +15,23 @@
   --secondary-color: #03dac5;
   --on-primary: #000;
   --on-background: rgba(255, 255, 255, 0.9);
-  --on-background-alt: rgba(255, 255, 255, 0.7);
+  --on-background-alt: rgba(255, 255, 255, 0.5);
   --background: #121212;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Inter", sans-serif;
   margin: 0;
+  color: var(--on-background);
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bf96ff' fill-opacity='0.38'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 section {
@@ -41,6 +48,7 @@ h1 {
 }
 
 h2 {
+  color: var(--on-background-alt);
   font-size: 32px;
   font-weight: normal;
 }
@@ -50,10 +58,11 @@ nav {
   z-index: 10;
   position: fixed;
   font-size: 24px;
-  letter-spacing: 3px;
   padding: 25px;
   width: 100vw;
   background: rgb(255 255 255 / 50%);
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
@@ -61,7 +70,8 @@ a {
   color: var(--primary-color);
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 a:hover,
@@ -158,93 +168,129 @@ button:hover:not(.outline) {
 
 p {
   margin: 0;
-  line-height: 25px;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 /* Contact Section */
-.fab {
-  font-size: 100px;
-  margin-right: 50px;
+.ti {
+  font-size: 80px;
+  padding: 20px;
   cursor: pointer;
   color: var(--primary-color);
 }
 
-.fab:hover {
+.ti:hover {
   color: var(--on-background);
 }
 
 /* Dark Mode Toggle */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  z-index: 100;
-  position: fixed;
-  right: 25px;
-  top: 30px;
-}
 
-.theme-switch-wrapper span {
-  margin-right: 10px;
-  font-size: 1rem;
-}
-
-.toggle-text {
+.switch {
+  margin-right: 100px;
+  font-size: 17px;
   position: relative;
-  top: -4px;
-  right: 5px;
-  color: var(--on-background);
-}
-
-.theme-switch {
   display: inline-block;
+  width: 64px;
   height: 34px;
-  position: relative;
-  width: 60px;
 }
 
-.theme-switch input {
-  display: none;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-  background: #ccc;
-  bottom: 0;
+  position: absolute;
   cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
   transition: 0.4s;
+  border-radius: 30px;
 }
 
-.slider::before {
-  background: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
+.slider:before {
   position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
   transition: 0.4s;
-  width: 26px;
 }
 
-input:checked + .slider {
-  background: var(--primary-color);
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
-input:checked + .slider::before {
-  transform: translateX(26px);
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
-.slider.round {
-  border-radius: 34px;
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
 }
 
-.slider.round::before {
-  border-radius: 50%;
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.fas {
-  font-size: 30px;
-  margin-right: 5px;
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
 }
