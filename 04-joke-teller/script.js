@@ -41,7 +41,7 @@ const VoiceRSS = {
       if (4 == t.readyState && 200 == t.status) {
         if (0 == t.responseText.indexOf("ERROR")) throw t.responseText;
         audioElement.src = t.responseText;
-        // audioElement.play();
+        audioElement.play(); // Play the audio after setting the source
       }
     }),
       t.open("POST", "https://api.voicerss.org/", !0),
@@ -160,9 +160,6 @@ button.addEventListener("click", async () => {
 
   // Fetch a new joke
   await getJoke();
-
-  // Play the audio
-  audioElement.play();
 });
 
 // Event listener for when audio playback starts
