@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #45badd;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("./robot.gif");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+button {
+  margin-top: 20vh;
+  cursor: pointer;
+  padding: 20px 40px;
+  border-radius: 18px;
+  border: none;
+  background-color: #ff307f;
+  color: white;
+  font-size: 20px;
+  box-shadow: 2px 2px 50px 20px rgba(61, 0, 23, 0.5);
+  transition: 150ms;
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+button:active {
+  filter: brightness(95%);
+  transform: scale(0.95);
+}
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  button {
+    box-shadow: 2px 2px 50px 20px rgba(61, 0, 23, 0.7);
+  }
+}
