@@ -132,7 +132,7 @@ const tellMe = (joke) => {
 // Function to fetch a joke from the JokeAPI
 const getJoke = async () => {
   let joke = "";
-  const apiUrl = "https://v2.jokeapi.dev/joke/Dark?blacklistFlags=political"; // API URL for fetching jokes
+  const apiUrl = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=political"; // API URL for fetching jokes
   try {
     // Fetch joke data from the API
     const response = await fetch(apiUrl);
