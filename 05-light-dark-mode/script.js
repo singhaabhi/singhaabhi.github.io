@@ -12,29 +12,26 @@ const imageMode = (color) => {
   image3.src = `img/undraw_conceptual_idea_${color}.svg`;
 };
 
-const darkMode = () => {
-  nav.style.backgroundColor = "rgb( 0 0 0 / 50%)";
-  textBox.style.backgroundColor = "rgb( 255 255 255 / 50%)";
-  textBox.style.color = "rgb(0 0 0)";
-  imageMode("dark");
-};
-const lightMode = () => {
-  nav.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  textBox.style.backgroundColor = "rgb( 0 0 0  / 50%)";
-  textBox.style.color = "rgb(255 255 255)";
-  imageMode("light");
+const applyStyles = (isDark) => {
+  const backgroundColor = isDark
+    ? "rgb(0 0 0 / 50%)"
+    : "rgb(255 255 255 / 50%)";
+  const textBoxBackgroundColor = isDark
+    ? "rgb( 255 255 255 / 50%)"
+    : "rgb( 0 0 0  / 50%)";
+  const textColor = isDark ? "rgb(0 0 0)" : "rgb(255 255 255)";
+  nav.style.backgroundColor = backgroundColor;
+  textBox.style.backgroundColor = textBoxBackgroundColor;
+  textBox.style.color = textColor;
+  imageMode(isDark ? "dark" : "light");
 };
 
 const switchTheme = () => {
-  if (event.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
-    darkMode();
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
-    lightMode();
-  }
+  const isDark = event.target.checked;
+  const theme = isDark ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  applyStyles(isDark);
 };
 
 toggleSwitch.addEventListener("change", switchTheme);
@@ -43,9 +40,6 @@ const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
-
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-    darkMode();
-  }
+  toggleSwitch.checked = currentTheme === "dark";
+  applyStyles(currentTheme === "dark");
 }
