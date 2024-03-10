@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-width: 100%;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+header {
+  z-index: 100;
+  height: max-content;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  color: #ffffff;
+  list-style: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 868px) {
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  /* MAIN HERO */
+  .phone_view {
+    display: none;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .header_con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    backdrop-filter: blur(30px);
+    margin: 10px;
+    padding: 10px 10px;
+  }
+
+  .btn_li {
+    padding: 12px 20px;
+    background: none;
+  }
+
+  .btn_li:last-child {
+    margin-left: 10px;
+  }
+
+  .btn_li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  #logo {
+    transition: 0.4s;
+  }
+
+  .zik_logo_text {
+    margin-left: 10px;
+  }
+
+  .get_btn {
+    background: rgba(96, 86, 235, 0.5);
+    padding: 12px 20px;
+    margin-right: 20px;
+  }
+
+  .get_btn:hover {
+    background: #6056eb;
+  }
+
+  .hero {
+    padding: 0 40px;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 8vh;
+    height: 90vh;
+  }
+
+  .herop {
+    margin-top: 90px;
+    z-index: 1;
+    opacity: 0.6;
+  }
+
+  .heroh {
+    margin-top: 50px;
+    z-index: 1;
+  }
+
+  .phone {
+    z-index: 0;
+    height: 45%;
+    rotate: 45deg;
+  }
+
+  .notes {
+    margin-top: 10vh;
+    height: max-content;
+    padding: 0 40px;
+  }
+
+  .supplier {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #0d0d0d;
+    border-radius: 40px;
+    padding: 40px;
+  }
+
+  .supplier_img {
+    width: 60%;
+  }
+
+  .s_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .s_right {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 100px;
+  }
+  .s_right_con {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .circle_con {
+    width: 30px;
+    justify-content: space-between;
+  }
+
+  .circle {
+    height: 12px;
+    width: 12px;
+    background-color: #6056eb;
+    border-radius: 50%;
+  }
+
+  .circle2 {
+    background-color: rgba(96, 86, 235, 0.5);
+  }
+
+  .sup_h {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 50px;
+  }
+
+  .sup_p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+
+  .sup_p_long {
+    opacity: 0.6;
+    font-size: 12px;
+  }
+
+  .start_bus {
+    margin-top: 50px;
+    align-self: flex-end;
+    background-color: #fff;
+    color: #0d0d0d;
+    padding: 14px 24px;
+  }
+
+  .consumer {
+    height: max-content;
+    display: flex;
+    background-color: #0d0d0d;
+    border-radius: 40px;
+    padding: 40px;
+    flex-direction: column-reverse;
+  }
+
+  .consumer_img {
+    width: 80%;
+  }
+
+  .c_right {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 100px;
+  }
+  .c_right_con {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .circle_con {
+    width: 30px;
+    justify-content: space-between;
+  }
+
+  .con_h {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 50px;
+  }
+
+  .con_p {
+    font-size: 12px;
+    opacity: 0.6;
+  }
+  .con_p_margin {
+    margin: 20px 0;
+  }
+
+  .con_p_long {
+    opacity: 0.6;
+    font-size: 12px;
+  }
+
+  .get_zik {
+    margin-top: 50px;
+    align-self: flex-end;
+    background-color: #fff;
+    color: #0d0d0d;
+    padding: 14px 24px;
+  }
+
+  .sign_up_letter {
+    background-color: #0d0d0d;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form_left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mail_img {
+    width: 20%;
+    z-index: 0;
+    bottom: 0px;
+  }
+
+  .form_right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form_h {
+    z-index: 10;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .form_p {
+    z-index: 10;
+    width: 70%;
+  }
+
+  #email_input {
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    color: #0d0d0d;
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    width: 120%;
+  }
+
+  #email_input::placeholder {
+    color: #6c6c6c;
+  }
+
+  .sub_btn {
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+  }
+}
