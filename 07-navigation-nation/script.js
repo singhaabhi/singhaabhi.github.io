@@ -11,16 +11,16 @@ const navItems = [
 
 // Toggle navigation function
 const toggleNav = () => {
-  // Toggle menu bars icon
+  // Toggle: Menu Bars Open/Closed
   menuBars.classList.toggle("change");
-  // Toggle overlay
+  // Toggle: Menu Active
   overlay.classList.toggle("overlay-active");
 
   // Check if overlay is active
   if (overlay.classList.contains("overlay-active")) {
     // Animate in
-    overlay.classList.add("overlay-slide-right");
-    overlay.classList.remove("overlay-slide-left");
+    // overlay.classList.add("overlay-slide-right");
+    overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
     // Animate each nav item in
     navItems.forEach((navItem, index) => {
       navItem.classList.remove(`slide-out-${index + 1}`);
